@@ -41,7 +41,7 @@ SlideShow can get the transition information from the class attribute of your sl
 
     #HTML
     <div id="slides">
-    	<div class="transition:crossFade duration:1000"     >1</div>
+    	<div class="transition:crossFade      duration:1000">1</div>
     	<div                                                >2</div> <!-- gets defaults -->
     	<div class="transition:blindRightFade duration:400" >3</div>
     	<div class="transition:fade           duration:1000">4</div>
