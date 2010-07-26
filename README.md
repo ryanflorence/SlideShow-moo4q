@@ -1,5 +1,7 @@
-SlideShow-m4q
+SlideShow-moo4q
 =============
+
+SlideShow-moo4q is built on moo4q, check it out [here](http://moo4q.com).
 
 Highly extensible slideshow widget. Use any element, not just images. Comes with packaged transitions but is easy to extend and create your own transitions.  The class is built to handle the _basics_ of a slideshow, extend it to implement your own navigation piece and custom transitions.
 
