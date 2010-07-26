@@ -1,0 +1,52 @@
+<!--
+*
+* SlideShow-m4q requires moo4q, get it from moo4q.com
+*
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>SlideShow-m4q Demo</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" charset="utf-8" src="http://moo4q.com/js/moo4q-yui.js"></script>
+	<script type="text/javascript" charset="utf-8" src="Loop.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../Source/SlideShow-m4q.js"></script>
+	<script type="text/javascript" charset="utf-8" src="demo.js"></script>
+</head>
+
+<body>
+	<h1>SlideShow-m4q Demo</h1>
+	<div id="slides">
+		<div class="transition:crossFade      duration:2000 red">  1</div>
+		<div class="transition:pushUp         duration:2000 green">2</div>
+		<div class="transition:pushDown       duration:2000  blue" >3</div>
+		<div class="transition:blindLeft      duration:2000  red"  >4</div>
+		<div class="transition:blindRight     duration:2000  green">5</div>
+		<div class="transition:blindRightFade duration:2000  blue" >6</div>
+	</div>
+	<h2>Events</h2>
+	<p>
+		<span id="onShow"        >show</span>
+		<span id="onShowComplete">showComplete</span>
+		<span id="onPlay"        >play</span>
+		<span id="onPause"       >pause</span>
+		<span id="onReverse"     >reverse</span>
+	</p>
+	<h2>Methods</h2>
+	<p>
+		<button id="pause"                           >pause</button>
+		<button id="play" disabled="disabled"        >play</button> 
+		<button id="reverse"                         >reverse</button> &nbsp; 
+		<button id="showNext" disabled="disabled"    >showNext</button>
+		<button id="showPrevious" disabled="disabled">showPrevious</button>
+		<button id="show" disabled="disabled"        >show slide 5 with options</button>
+		<button id="showIndex" disabled="disabled"   >show slide 1</button>
+	</p>
+
+</body>
+</html>
