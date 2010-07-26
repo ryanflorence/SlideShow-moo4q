@@ -25,6 +25,18 @@ ul#ticker li {
 	padding: 0.2em 0;
 }
 
+ul.nav li {
+  float: left;
+  margin: 4px;
+  padding: 4px;
+  border: solid 1px;
+  list-style: none;
+}
+
+ul.nav {
+  overflow: auto;
+}
+
 /* @group global */
 
 body {

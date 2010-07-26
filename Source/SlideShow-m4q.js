@@ -56,7 +56,7 @@ var SlideShow = new Class({
 	},
 	
 	setupElement: function(){
-		if (this.element.css('position') != 'absolute' && this.element[0] != document.body) this.element.css('position','rthis.elementative');
+		if (this.element.css('position') != 'absolute' && this.element[0] != document.body) this.element.css('position','relative');
 		return this;
 	},
 	
@@ -97,7 +97,7 @@ var SlideShow = new Class({
 	
 	show: function(slide, options){
 		slide = (typeof slide == 'number') ? jQuery(this.slides[slide]) : jQuery(slide);
-		if (slide[0] != this.current && !this.transitioning){
+		if (slide[0] != this.current[0] && !this.transitioning){
 			this.transitioning = true;
 			var transition = (options && options.transition) ? options.transition: this.getTransition(slide),
 				duration = (options && options.duration) ? options.duration: this.getDuration(slide),
@@ -115,7 +115,7 @@ var SlideShow = new Class({
 			};
 			this.fireEvent('show', slideData);
 			this.transitions[transition](previous, next, duration, this);
-			(function() { 
+			(function() {
 				previous.css('display','none');
 				this.fireEvent('showComplete', slideData);
 				this.transitioning = false;
@@ -267,44 +267,36 @@ SlideShow.addAllThese([
 	
 	['blindLeft', function(p, n, d, i){
 		var distance = i.element.css('width').toInt();
-		n
-			.css({
+		n.css({
 				'left': distance,
-				'z-index': 1
-			})
+				'z-index': 2 })
 			.animate({'left': 0}, d);
 		return this;
 	}],
 
 	['blindRight', function(p, n, d, i){
 		var distance = i.element.css('width').toInt();
-		n
-			.css({
+		n.css({
 				'left': -distance,
-				'z-index': 1
-			})
+				'z-index': 2 })
 			.animate({'left': 0}, d);
 		return this;
 	}],
 		
 	['blindUp', function(p, n, d, i){
 		var distance = i.element.css('height').toInt();
-		n
-			.css({
+		n.css({
 				'top': distance,
-				'z-index': 1
-			})
+				'z-index': 2 })
 			.animate({'top': 0}, d);
 		return this;
 	}],
 	
 	['blindDown', function(p, n, d, i){
 		var distance = i.element.css('height').toInt();
-		n
-			.css({
+		n.css({
 				'top': -distance,
-				'z-index': 1
-			})
+				'z-index': 2 })
 			.animate({'top': 0}, d);
 		return this;
 	}],
